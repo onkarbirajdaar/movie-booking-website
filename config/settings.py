@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "django_filters",
     "drf_spectacular",
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -180,3 +181,5 @@ SPECTACULAR_SETTINGS = {
 CORS_ALLOWED_ORIGINS = env.list(
     "CORS_ALLOWED_ORIGINS", default=["http://localhost:8000"]
 )
+
+AUTH_USER_MODEL = "accounts.User"
